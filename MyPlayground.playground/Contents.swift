@@ -74,4 +74,35 @@ while count < repeatCount {
 print(result)
 
 
+//21. Merge Two Sorted Lists
+//Input: list1 = [1,2,4], list2 = [1,3,4]
+//Output: [1,1,2,3,4,4]
+
+var list1 = [1,2,4]
+var list2 = [1,3,4]
+
+/*
+回答方針：二つのlistを結合させて、昇順に並べ替える
+ listにlist要素を追加する方法は
+ list.append(list) だと要素の一つがlistになりそうではある
+ 
+ var list1 = [1,2,4]
+ var list2 = [1,3,4]
+ 
+ list1.append(list2) // -> No exact matches in call to instance method 'append'
+ 
+ appendを使う場合はlist.append(contentsOf: list2)でできる
+ 
+ */
+
+var combinedList = list1 + list2
+print(combinedList)
+
+combinedList.sort()
+
+
+
+
+
+
 
